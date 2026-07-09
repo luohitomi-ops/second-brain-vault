@@ -126,6 +126,65 @@ const shell = R.createEl('div', { cls: 'db-shell' });
     });
   });
 
+  // 資料庫（所有分支內容庫，按區域分組，預設收合避免側欄過長，2026-07-10 新增）
+  (function buildDataLibrary() {
+    const labelRow = sb.createEl('div', {
+      cls: 'db-nav-group-label',
+      attr: { style: 'cursor:pointer;user-select:none;display:flex;align-items:center;justify-content:space-between;' },
+    });
+    labelRow.createEl('span', { text: '資料庫' });
+    const chev = labelRow.createEl('span', { attr: { style: 'font-size:10px;' }, text: '▸' });
+
+    const wrap = sb.createEl('div', { attr: { style: 'display:none;' } });
+
+    const groups = [
+      ['品牌', 'brand', [
+        ['主持資料庫', '01 Brand/主持資料庫/README'],
+        ['香氛工作室', '01 Brand/香氛工作室/README'],
+        ['COS經營', 'COS經營'],
+        ['接案執行庫', '接案執行庫'],
+        ['部落格進度', '部落格進度'],
+        ['每日熱門話題摘要', '每日熱門話題摘要'],
+        ['撥撥獺獺IP', '撥撥獺獺IP'],
+        ['社群自動發文', '社群自動發文'],
+      ]],
+      ['投資', 'invest', [
+        ['投資知識庫', '投資知識庫'],
+      ]],
+      ['波段', 'swing', [
+        ['波段庫存', '波段庫存'],
+        ['個股總覽', '個股總覽'],
+        ['觀察名單', '觀察名單'],
+        ['給獺金幣程式', '給獺金幣程式'],
+      ]],
+      ['生活', 'life', [
+        ['愛美與醫美心得', '愛美與醫美心得'],
+        ['想學習的技能清單', '想學習的技能清單'],
+        ['課程筆記庫', '06 Lifestyle & Self-Growth/課程筆記庫/README'],
+        ['自律計劃表', '自律計劃表'],
+      ]],
+      ['快速捕獲', 'capture', [
+        ['每日碎片隨記', '07 Quick Capture & Hub/每日碎片化靈感隨記'],
+        ['靈感庫', '靈感庫'],
+      ]],
+    ];
+
+    groups.forEach(([areaLabel, icon, items]) => {
+      el(wrap, 'div', { attr: { style: 'font-size:10px;color:var(--db-text-muted);text-transform:uppercase;letter-spacing:.06em;padding:8px 12px 2px;' }, text: areaLabel });
+      items.forEach(([label, target]) => {
+        const a = wrap.createEl('div', { cls: 'db-nav-item', attr: { style: 'padding-left:24px;font-size:12px;' } });
+        a.innerHTML = `<span class="db-nav-icon">${ICONS[icon]}</span>${label}`;
+        a.addEventListener('click', () => openPage(target));
+      });
+    });
+
+    labelRow.addEventListener('click', () => {
+      const open = wrap.style.display !== 'none';
+      wrap.style.display = open ? 'none' : 'block';
+      chev.textContent = open ? '▸' : '▾';
+    });
+  })();
+
   // Footer
   const footer = sb.createEl('div', { cls: 'db-sidebar-footer' });
   el(footer, 'div', { cls: 'db-sidebar-footer-label', text: '外觀設定' });
