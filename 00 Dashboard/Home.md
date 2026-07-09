@@ -137,44 +137,65 @@ const shell = R.createEl('div', { cls: 'db-shell' });
 
     const wrap = sb.createEl('div', { attr: { style: 'display:none;' } });
 
+    // 每個區域底下再分子分類（品牌項目多容易混雜，拆開後主持資料庫才好找；
+    // 香氛工作室暫歸「其他事業」子分類，之後量變大可再獨立出去）
     const groups = [
       ['品牌', 'brand', [
-        ['主持資料庫', '01 Brand/主持資料庫/README'],
-        ['香氛工作室', '01 Brand/香氛工作室/README'],
-        ['COS經營', 'COS經營'],
-        ['接案執行庫', '接案執行庫'],
-        ['部落格進度', '部落格進度'],
-        ['每日熱門話題摘要', '每日熱門話題摘要'],
-        ['撥撥獺獺IP', '撥撥獺獺IP'],
-        ['社群自動發文', '社群自動發文'],
+        ['主持與接案', [
+          ['主持資料庫', '01 Brand/主持資料庫/README'],
+          ['接案執行庫', '接案執行庫'],
+          ['COS經營', 'COS經營'],
+        ]],
+        ['內容與發文', [
+          ['每日熱門話題摘要', '每日熱門話題摘要'],
+          ['社群自動發文', '社群自動發文'],
+          ['部落格進度', '部落格進度'],
+        ]],
+        ['其他事業（暫歸品牌）', [
+          ['香氛工作室', '01 Brand/香氛工作室/README'],
+          ['撥撥獺獺IP', '撥撥獺獺IP'],
+        ]],
       ]],
       ['投資', 'invest', [
-        ['投資知識庫', '投資知識庫'],
+        ['', [
+          ['投資知識庫', '投資知識庫'],
+        ]],
       ]],
       ['波段', 'swing', [
-        ['波段庫存', '波段庫存'],
-        ['個股總覽', '個股總覽'],
-        ['觀察名單', '觀察名單'],
-        ['給獺金幣程式', '給獺金幣程式'],
+        ['', [
+          ['波段庫存', '波段庫存'],
+          ['個股總覽', '個股總覽'],
+          ['觀察名單', '觀察名單'],
+          ['給獺金幣程式', '給獺金幣程式'],
+        ]],
       ]],
       ['生活', 'life', [
-        ['愛美與醫美心得', '愛美與醫美心得'],
-        ['想學習的技能清單', '想學習的技能清單'],
-        ['課程筆記庫', '06 Lifestyle & Self-Growth/課程筆記庫/README'],
-        ['自律計劃表', '自律計劃表'],
+        ['', [
+          ['愛美與醫美心得', '愛美與醫美心得'],
+          ['想學習的技能清單', '想學習的技能清單'],
+          ['課程筆記庫', '06 Lifestyle & Self-Growth/課程筆記庫/README'],
+          ['自律計劃表', '自律計劃表'],
+        ]],
       ]],
       ['快速捕獲', 'capture', [
-        ['每日碎片隨記', '07 Quick Capture & Hub/每日碎片化靈感隨記'],
-        ['靈感庫', '靈感庫'],
+        ['', [
+          ['每日碎片隨記', '07 Quick Capture & Hub/每日碎片化靈感隨記'],
+          ['靈感庫', '靈感庫'],
+        ]],
       ]],
     ];
 
-    groups.forEach(([areaLabel, icon, items]) => {
+    groups.forEach(([areaLabel, icon, subGroups]) => {
       el(wrap, 'div', { attr: { style: 'font-size:10px;color:var(--db-text-muted);text-transform:uppercase;letter-spacing:.06em;padding:8px 12px 2px;' }, text: areaLabel });
-      items.forEach(([label, target]) => {
-        const a = wrap.createEl('div', { cls: 'db-nav-item', attr: { style: 'padding-left:24px;font-size:12px;' } });
-        a.innerHTML = `<span class="db-nav-icon">${ICONS[icon]}</span>${label}`;
-        a.addEventListener('click', () => openPage(target));
+      subGroups.forEach(([subLabel, items]) => {
+        if (subLabel) {
+          el(wrap, 'div', { attr: { style: 'font-size:10px;color:var(--db-text-muted);opacity:.7;padding:4px 12px 2px 24px;' }, text: subLabel });
+        }
+        items.forEach(([label, target]) => {
+          const a = wrap.createEl('div', { cls: 'db-nav-item', attr: { style: 'padding-left:32px;font-size:12px;' } });
+          a.innerHTML = `<span class="db-nav-icon">${ICONS[icon]}</span>${label}`;
+          a.addEventListener('click', () => openPage(target));
+        });
       });
     });
 
