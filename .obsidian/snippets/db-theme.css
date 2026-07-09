@@ -1,0 +1,85 @@
+/* ============================================================
+   db-theme.css — 深色主題基礎層
+   覆蓋 Obsidian / Minimal Theme 預設值，讓 dashboard-v2 頁面
+   套用正確背景色與字型，不影響其他筆記。
+   ============================================================ */
+
+/* 只對套用 cssclasses: dashboard-v2 的頁面生效 */
+
+/* --- 頁面底層背景 --- */
+.markdown-source-view.dashboard-v2,
+.markdown-preview-view.dashboard-v2 {
+  background: var(--db-bg-base) !important;
+  font-family: var(--db-font-ui) !important;
+  color: var(--db-text-primary) !important;
+}
+
+/* --- 解除可讀行寬限制（與 card-dashboard.css 同邏輯，更強版）--- */
+.markdown-source-view.dashboard-v2 .cm-sizer,
+.markdown-source-view.is-readable-line-width.dashboard-v2 .cm-sizer,
+.markdown-source-view.dashboard-v2 .cm-contentContainer,
+.markdown-source-view.dashboard-v2 .cm-content,
+.markdown-source-view.dashboard-v2 .cm-editor,
+.markdown-preview-view.dashboard-v2 .markdown-preview-sizer {
+  max-width: none !important;
+  width: 100% !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* --- 隱藏 frontmatter 屬性表格 --- */
+.markdown-source-view.dashboard-v2 .metadata-container,
+.markdown-preview-view.dashboard-v2 .metadata-container {
+  display: none !important;
+}
+
+/* --- 隱藏頁面標題（由 DataviewJS Header 取代）--- */
+.markdown-source-view.dashboard-v2 .inline-title,
+.markdown-preview-view.dashboard-v2 .inline-title {
+  display: none !important;
+}
+
+/* --- Scrollbar 樣式 --- */
+.markdown-source-view.dashboard-v2 ::-webkit-scrollbar,
+.markdown-preview-view.dashboard-v2 ::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+.markdown-source-view.dashboard-v2 ::-webkit-scrollbar-track,
+.markdown-preview-view.dashboard-v2 ::-webkit-scrollbar-track {
+  background: transparent;
+}
+.markdown-source-view.dashboard-v2 ::-webkit-scrollbar-thumb,
+.markdown-preview-view.dashboard-v2 ::-webkit-scrollbar-thumb {
+  background: var(--db-smoky);
+  border-radius: 4px;
+}
+
+/* --- DataviewJS 容器：移除 Dataview 預設 padding --- */
+.markdown-source-view.dashboard-v2 .dataview,
+.markdown-preview-view.dashboard-v2 .dataview {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* --- 覆蓋 Minimal Theme 可能注入的白色背景 --- */
+.markdown-source-view.dashboard-v2 .cm-line,
+.markdown-source-view.dashboard-v2 .cm-content {
+  background: transparent !important;
+}
+
+/* --- 確保 DataviewJS 內建立的元素繼承字型 --- */
+.markdown-source-view.dashboard-v2 *,
+.markdown-preview-view.dashboard-v2 * {
+  font-family: var(--db-font-ui);
+  box-sizing: border-box;
+}
+
+/* ── 全局隱藏 Properties 屬性面板 ── */
+.metadata-container,
+.frontmatter-container,
+.cm-frontmatter-widget {
+  display: none !important;
+}

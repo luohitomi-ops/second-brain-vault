@@ -1,0 +1,9 @@
+# Obsidian 本機狀態，跨裝置同步會一直衝突，不需要版本控制
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+
+# Smart Connections 外掛的本機向量快取，可重新生成，體積大不需版本控制
+.smart-env/
+
+# 指向 .claude/skills/social-post 的 symlink，目標路徑是本機專屬，其他裝置會斷link
+09 發文數據

@@ -1,0 +1,103 @@
+/* ============================================================
+   db-layout.css — Grid 骨架 & App Shell
+   ============================================================ */
+
+/* --- 最外層容器：Sidebar + 主內容區 --- */
+.db-shell {
+  display: flex;
+  height: 100%;
+  min-height: 100vh;
+  background: var(--db-bg-base);
+  font-family: var(--db-font-ui);
+  font-size: var(--db-font-size-base);
+  color: var(--db-text-primary);
+}
+
+/* --- 主內容區 --- */
+.db-main {
+  flex: 1;
+  min-width: 0;
+  padding: 24px 28px 40px 28px;
+  overflow-y: auto;
+}
+
+/* --- Dashboard Grid：主要卡片排版 --- */
+.db-grid {
+  display: grid;
+  gap: var(--db-gap);
+}
+
+/* 兩欄等寬 */
+.db-grid-2col {
+  grid-template-columns: 1fr 1fr;
+}
+
+/* 左大右小（3:2）*/
+.db-grid-3-2 {
+  grid-template-columns: 3fr 2fr;
+}
+
+/* 左小右大（2:3）*/
+.db-grid-2-3 {
+  grid-template-columns: 2fr 3fr;
+}
+
+/* 三欄等寬 */
+.db-grid-3col {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+/* 四欄（今日概覽數字）*/
+.db-grid-4col {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* 佔滿整行 */
+.db-col-full {
+  grid-column: 1 / -1;
+}
+
+/* --- 各排之間的間距區塊 --- */
+.db-section {
+  display: contents; /* 讓子元素直接參與外層 grid */
+}
+
+/* --- 區塊標題列（標題 + 右側操作按鈕）--- */
+.db-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.db-section-title {
+  font-size: var(--db-font-size-sm);
+  font-weight: 600;
+  color: var(--db-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* --- 分隔線 --- */
+.db-divider {
+  border: none;
+  border-top: 1px solid var(--db-border);
+  margin: 10px 0;
+}
+
+/* --- Responsive：寬度不足時單欄 --- */
+@media (max-width: 1100px) {
+  .db-grid-2col,
+  .db-grid-3-2,
+  .db-grid-2-3 {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 900px) {
+  .db-grid-3col { grid-template-columns: 1fr 1fr; }
+  .db-grid-4col { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) {
+  .db-grid-3col,
+  .db-grid-4col { grid-template-columns: 1fr; }
+  .db-main { padding: 16px; }
+}

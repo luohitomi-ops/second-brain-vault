@@ -1,0 +1,78 @@
+/* ===== 檸子第二大腦 · 宇宙風主題 ===== */
+/* 深空背景 */
+.theme-dark {
+  --background-primary: #0d0b1f;
+  --background-primary-alt: #131029;
+  --background-secondary: #16132e;
+  --background-secondary-alt: #1b1738;
+  --text-normal: #e8e6f5;
+  --text-muted: #a09cc4;
+  --text-accent: #9b8cff;
+  --text-accent-hover: #b8acff;
+  --interactive-accent: #6d5dd3;
+  --interactive-accent-hover: #8170e8;
+  --background-modifier-border: #2a2550;
+  --h1-color: #c4b8ff;
+  --h2-color: #a99cff;
+  --h3-color: #9b8cff;
+}
+
+/* 關係圖譜：星空連線 */
+.theme-dark .graph-view.color-fill { color: #8170e8; }
+.theme-dark .graph-view.color-line { color: #2e2860; }
+.theme-dark .graph-view.color-text { color: #c4b8ff; }
+.theme-dark .graph-view.color-circle { color: #b8acff; }
+.theme-dark .graph-view.color-fill-highlight { color: #d4c8ff; }
+.theme-dark .graph-view.color-line-highlight { color: #9b8cff; }
+
+/* 標題發光感 */
+.theme-dark .markdown-preview-view h1,
+.theme-dark .markdown-rendered h1 {
+  text-shadow: 0 0 18px rgba(155, 140, 255, 0.35);
+  font-weight: 600;
+}
+
+/* 表格：玻璃卡片感 */
+.theme-dark table {
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #2a2550;
+}
+.theme-dark th {
+  background: #1b1738;
+  color: #b8acff;
+  font-weight: 500;
+}
+.theme-dark td { border-color: #221d44; }
+.theme-dark tr:hover td { background: #1a1636; }
+
+/* 引言區塊：星雲邊框 */
+.theme-dark blockquote {
+  border-left: 3px solid #6d5dd3;
+  background: #15122c;
+  border-radius: 0 8px 8px 0;
+  color: #c4b8ff;
+}
+
+/* 內部連結：星光點 */
+.theme-dark .internal-link {
+  color: #9b8cff;
+  text-decoration: none;
+  border-bottom: 1px dotted #6d5dd3;
+}
+.theme-dark .internal-link:hover {
+  color: #c4b8ff;
+  text-shadow: 0 0 8px rgba(155, 140, 255, 0.5);
+}
+
+/* 勾選清單 */
+.theme-dark .task-list-item-checkbox { accent-color: #8170e8; }
+
+/* 側欄 */
+.theme-dark .nav-folder-title { color: #b8acff; }
+.theme-dark .nav-file-title:hover { background: #1a1636; }
+
+/* Dataview 卡片美化 */
+.theme-dark .dataview.table-view-table th { color: #b8acff; }

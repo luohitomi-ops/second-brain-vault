@@ -1,0 +1,320 @@
+/* ============================================================
+   db-cards.css — 卡片通用樣式 + 互動元件
+   ============================================================ */
+
+/* ---- 基礎卡片 ---- */
+.db-card {
+  background: var(--db-bg-glass);
+  border: 1px solid var(--db-border);
+  border-radius: var(--db-radius-card);
+  padding: var(--db-pad-card);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: var(--db-shadow-card);
+  transition: var(--db-transition);
+  position: relative;
+  overflow: hidden;
+}
+.db-card:hover {
+  background: var(--db-bg-glass-hover);
+  border-color: var(--db-border-hover);
+  box-shadow: var(--db-shadow-hover);
+  transform: translateY(-1px);
+}
+
+/* 卡片頂部光邊（裝飾）*/
+.db-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(139,123,173,0.4), transparent);
+  pointer-events: none;
+}
+
+/* ---- 卡片 Header ---- */
+.db-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+.db-card-title {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--db-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+}
+.db-card-title-icon {
+  width: 14px;
+  height: 14px;
+  color: var(--db-purple);
+}
+.db-card-action {
+  font-size: 11px;
+  color: var(--db-teal);
+  cursor: pointer;
+  text-decoration: none;
+  opacity: 0.8;
+  transition: var(--db-transition-fast);
+}
+.db-card-action:hover { opacity: 1; }
+
+/* ---- 卡片內容區（可捲動）---- */
+.db-card-body {
+  max-height: 260px;
+  overflow-y: auto;
+}
+.db-card-body-tall { max-height: 360px; }
+.db-card-body-auto { max-height: none; }
+
+/* ---- 數字統計（今日概覽）---- */
+.db-stat-card {
+  background: var(--db-bg-glass);
+  border: 1px solid var(--db-border);
+  border-radius: var(--db-radius-card);
+  padding: 18px 20px;
+  backdrop-filter: blur(12px);
+  box-shadow: var(--db-shadow-card);
+  transition: var(--db-transition);
+}
+.db-stat-card:hover {
+  border-color: var(--db-border-hover);
+  box-shadow: var(--db-shadow-hover);
+  transform: translateY(-1px);
+}
+.db-stat-label {
+  font-size: var(--db-font-size-xs);
+  color: var(--db-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 8px;
+}
+.db-stat-value {
+  font-size: var(--db-font-size-2xl);
+  font-weight: 700;
+  color: var(--db-cream);
+  line-height: 1;
+}
+.db-stat-sub {
+  font-size: var(--db-font-size-xs);
+  color: var(--db-text-muted);
+  margin-top: 4px;
+}
+
+/* ---- Priority Tag ---- */
+.db-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: var(--db-radius-tag);
+  font-size: var(--db-font-size-xs);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+.db-tag-high {
+  background: var(--db-priority-high-bg);
+  color: var(--db-priority-high);
+  border: 1px solid rgba(176,112,112,0.3);
+}
+.db-tag-med {
+  background: var(--db-priority-med-bg);
+  color: var(--db-priority-med);
+  border: 1px solid rgba(139,123,173,0.3);
+}
+.db-tag-low {
+  background: var(--db-priority-low-bg);
+  color: var(--db-priority-low);
+  border: 1px solid rgba(106,122,122,0.3);
+}
+
+/* ---- Tab 切換 ---- */
+.db-tabs {
+  display: flex;
+  gap: 4px;
+  background: var(--db-bg-deep);
+  border-radius: var(--db-radius-inner);
+  padding: 4px;
+  margin-bottom: 14px;
+}
+.db-tab {
+  flex: 1;
+  padding: 7px 12px;
+  border-radius: var(--db-radius-sm);
+  font-size: var(--db-font-size-sm);
+  font-weight: 500;
+  color: var(--db-text-muted);
+  text-align: center;
+  cursor: pointer;
+  transition: var(--db-transition-fast);
+  border: 1px solid transparent;
+}
+.db-tab:hover { color: var(--db-text-secondary); }
+.db-tab.active {
+  background: var(--db-purple-subtle);
+  color: var(--db-cream);
+  border-color: rgba(139,123,173,0.3);
+  font-weight: 600;
+}
+.db-tab-panel { display: none; }
+.db-tab-panel.active { display: block; }
+
+/* ---- 按鈕 ---- */
+.db-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: var(--db-radius-btn);
+  font-size: var(--db-font-size-sm);
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: var(--db-transition-fast);
+}
+.db-btn-primary {
+  background: var(--db-btn-gradient);
+  color: #1E1B22;
+}
+.db-btn-primary:hover {
+  background: var(--db-btn-gradient-dim);
+  transform: translateY(-1px);
+  box-shadow: 0 3px 12px rgba(122,168,168,0.3);
+}
+.db-btn-ghost {
+  background: transparent;
+  color: var(--db-text-secondary);
+  border: 1px solid var(--db-border-input);
+}
+.db-btn-ghost:hover {
+  border-color: var(--db-border-hover);
+  color: var(--db-text-primary);
+}
+.db-btn-sm {
+  padding: 5px 10px;
+  font-size: var(--db-font-size-xs);
+}
+
+/* ---- Input / Textarea ---- */
+.db-input {
+  width: 100%;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid var(--db-border-input);
+  border-radius: var(--db-radius-input);
+  padding: 8px 12px;
+  font-size: var(--db-font-size-sm);
+  color: var(--db-text-primary);
+  font-family: var(--db-font-ui);
+  outline: none;
+  box-shadow: var(--db-shadow-input);
+  transition: var(--db-transition-fast);
+}
+.db-input::placeholder { color: var(--db-text-muted); }
+.db-input:focus {
+  border-color: var(--db-border-active);
+  background: rgba(255,255,255,0.09);
+}
+.db-textarea {
+  resize: vertical;
+  min-height: 72px;
+  line-height: 1.6;
+}
+
+/* ---- Select ---- */
+.db-select {
+  appearance: none;
+  background: rgba(255,255,255,0.06) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%236B6480' stroke-width='2'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") no-repeat right 10px center;
+  border: 1px solid var(--db-border-input);
+  border-radius: var(--db-radius-input);
+  padding: 7px 30px 7px 12px;
+  font-size: var(--db-font-size-sm);
+  color: var(--db-text-primary);
+  font-family: var(--db-font-ui);
+  outline: none;
+  cursor: pointer;
+  transition: var(--db-transition-fast);
+}
+.db-select:focus { border-color: var(--db-border-active); }
+.db-select option { background: #252229; }
+
+/* ---- Checkbox ---- */
+.db-checkbox-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 7px 0;
+  border-bottom: 1px solid var(--db-border);
+  cursor: pointer;
+}
+.db-checkbox-row:last-child { border-bottom: none; }
+.db-checkbox {
+  width: 16px;
+  height: 16px;
+  border-radius: 5px;
+  border: 1.5px solid var(--db-gray-purple);
+  background: transparent;
+  flex-shrink: 0;
+  margin-top: 1px;
+  cursor: pointer;
+  accent-color: var(--db-purple);
+}
+.db-checkbox-label {
+  font-size: var(--db-font-size-sm);
+  color: var(--db-text-primary);
+  line-height: 1.5;
+}
+.db-checkbox-label.done {
+  text-decoration: line-through;
+  color: var(--db-text-muted);
+}
+
+/* ---- Badge（小數字標）---- */
+.db-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 6px;
+  border-radius: 10px;
+  font-size: 10px;
+  font-weight: 600;
+  background: var(--db-purple-subtle);
+  color: var(--db-purple);
+  border: 1px solid rgba(139,123,173,0.3);
+}
+
+/* ---- 空狀態提示 ---- */
+.db-empty {
+  text-align: center;
+  padding: 24px 0;
+  color: var(--db-text-muted);
+  font-size: var(--db-font-size-sm);
+}
+
+/* ---- 行列表項目 ---- */
+.db-list-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 0;
+  border-bottom: 1px solid var(--db-border);
+  font-size: var(--db-font-size-sm);
+  color: var(--db-text-primary);
+  transition: var(--db-transition-fast);
+}
+.db-list-item:last-child { border-bottom: none; }
+.db-list-item:hover { color: var(--db-cream); }
+
+/* ---- 連結樣式 ---- */
+.db-link {
+  color: var(--db-teal);
+  text-decoration: none;
+  cursor: pointer;
+  transition: var(--db-transition-fast);
+}
+.db-link:hover { color: var(--db-cream); text-decoration: underline; }

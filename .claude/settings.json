@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Edit(C:\\Users\\USER\\.claude\\skills\\social-post\\content_plan.md)",
+      "Write(C:\\Users\\USER\\.claude\\skills\\social-post\\content_plan.md)",
+      "Edit(C:\\Users\\USER\\.claude\\skills\\social-post\\history.md)",
+      "Write(C:\\Users\\USER\\.claude\\skills\\social-post\\history.md)",
+      "Edit(C:\\tia\\vault\\01 Brand\\社群數據\\content_plan.md)",
+      "Write(C:\\tia\\vault\\01 Brand\\社群數據\\content_plan.md)",
+      "Edit(C:\\tia\\vault\\01 Brand\\社群數據\\history.md)",
+      "Write(C:\\tia\\vault\\01 Brand\\社群數據\\history.md)"
+    ]
+  }
+}

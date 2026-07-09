@@ -1,0 +1,88 @@
+/* ============================================================
+   db-variables.css — Design Tokens
+   檸子資料庫 Dashboard · Dark Fantasy Productivity
+   ============================================================ */
+
+:root {
+  /* --- 背景層 --- */
+  --db-bg-base:          #1E1B22;   /* 最底層頁面背景 */
+  --db-bg-elevated:      #252229;   /* 卡片背景 */
+  --db-bg-deep:          #1A1720;   /* 卡片內深色子區塊 */
+  --db-bg-glass:         rgba(37, 34, 41, 0.7);  /* 玻璃霧面 */
+  --db-bg-glass-hover:   rgba(42, 39, 48, 0.85);
+
+  /* --- 主色系 --- */
+  --db-purple:           #8B7BAD;   /* 莫蘭德紫 */
+  --db-purple-dim:       #6B5B8C;   /* 深一階 */
+  --db-purple-subtle:    rgba(139, 123, 173, 0.15); /* 極淡填充 */
+  --db-rose:             #A08585;   /* 乾燥玫瑰 */
+  --db-rose-dim:         #7D6868;
+  --db-gray-purple:      #7A7490;   /* 灰紫 */
+  --db-smoky:            #4A3F5C;   /* 煙燻紫（深色背景用） */
+
+  /* --- 點綴色 --- */
+  --db-cream:            #F0E6C8;   /* 奶油色（主要按鈕/強調文字）*/
+  --db-cream-dim:        rgba(240, 230, 200, 0.7);
+  --db-teal:             #7AA8A8;   /* 低飽和青色 */
+  --db-teal-dim:         rgba(122, 168, 168, 0.6);
+
+  /* --- Priority Tag 顏色 --- */
+  --db-priority-high:    #B07070;   /* 高優先：乾燥紅 */
+  --db-priority-med:     #8B7BAD;   /* 中優先：莫蘭德紫 */
+  --db-priority-low:     #6A7A7A;   /* 低優先：煙燻青 */
+  --db-priority-high-bg: rgba(176, 112, 112, 0.15);
+  --db-priority-med-bg:  rgba(139, 123, 173, 0.15);
+  --db-priority-low-bg:  rgba(106, 122, 122, 0.15);
+
+  /* --- 文字 --- */
+  --db-text-primary:     #E8E4F0;   /* 主文字 */
+  --db-text-secondary:   #A89EC0;   /* 次要文字 */
+  --db-text-muted:       #6B6480;   /* 說明文字 */
+  --db-text-cream:       #F0E6C8;   /* 奶油色文字（強調）*/
+
+  /* --- Border --- */
+  --db-border:           rgba(255, 255, 255, 0.07);
+  --db-border-hover:     rgba(139, 123, 173, 0.4);
+  --db-border-active:    rgba(139, 123, 173, 0.7);
+  --db-border-input:     rgba(255, 255, 255, 0.12);
+
+  /* --- Shadow --- */
+  --db-shadow-card:      0 2px 16px rgba(0, 0, 0, 0.3);
+  --db-shadow-hover:     0 6px 24px rgba(0, 0, 0, 0.45);
+  --db-shadow-input:     inset 0 1px 3px rgba(0, 0, 0, 0.3);
+
+  /* --- 圓角 --- */
+  --db-radius-card:      20px;
+  --db-radius-inner:     12px;
+  --db-radius-sm:        8px;
+  --db-radius-btn:       10px;
+  --db-radius-tag:       6px;
+  --db-radius-input:     10px;
+
+  /* --- 間距 --- */
+  --db-gap:              18px;      /* 卡片間距 */
+  --db-gap-inner:        12px;      /* 卡片內部間距 */
+  --db-gap-sm:           8px;
+  --db-pad-card:         20px 22px; /* 卡片 padding */
+  --db-pad-inner:        14px 16px;
+
+  /* --- 字型 --- */
+  --db-font-ui:          'Inter', 'Noto Sans TC', sans-serif;
+  --db-font-size-base:   14px;
+  --db-font-size-sm:     12px;
+  --db-font-size-xs:     11px;
+  --db-font-size-lg:     16px;
+  --db-font-size-xl:     20px;
+  --db-font-size-2xl:    26px;
+
+  /* --- 動畫 --- */
+  --db-transition:       all 0.2s ease;
+  --db-transition-fast:  all 0.15s ease;
+
+  /* --- Sidebar 寬度 --- */
+  --db-sidebar-width:    220px;
+
+  /* --- 按鈕漸層（奶油+青）--- */
+  --db-btn-gradient:     linear-gradient(135deg, #F0E6C8 0%, #7AA8A8 100%);
+  --db-btn-gradient-dim: linear-gradient(135deg, rgba(240,230,200,0.85) 0%, rgba(122,168,168,0.85) 100%);
+}

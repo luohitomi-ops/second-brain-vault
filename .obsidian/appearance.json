@@ -1,0 +1,13 @@
+{
+  "enabledCssSnippets": [
+    "cosmic",
+    "card-dashboard",
+    "db-theme",
+    "db-variables",
+    "db-sidebar",
+    "db-layout",
+    "db-cards",
+    "db-animation"
+  ],
+  "theme": "obsidian"
+}
