@@ -1,7 +1,7 @@
 ---
 type: home
 status: active
-updated: 2026-07-02
+updated: 2026-07-10
 cssclasses:
   - dashboard-v2
 ---
@@ -1302,8 +1302,10 @@ try {
     // 即將接案提示
     el(card, 'div', { attr: { style: 'font-size:10px;color:var(--db-text-muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px;' }, text: '近期接案 / 截止' });
     const workList = el(card, 'div', { cls: 'db-card-body' });
+    // ⚠️ 手動維護清單，過期記得換掉（不是自動從 content_plan.md 撈的）
     const upcoming = [
-      { date: '7/3-4', item: '成人展（品牌發文素材）', type: 'SG' },
+      { date: '7/11-13', item: '重機展主持（颱風順延）', type: '主持' },
+      { date: '7/13', item: '植芮堂業配 IG', type: '業配' },
       { date: '7/18', item: '蝦皮帶貨首播', type: '直播' },
     ];
     upcoming.forEach(({ date, item, type }) => {
