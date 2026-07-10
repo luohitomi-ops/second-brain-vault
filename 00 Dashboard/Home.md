@@ -48,6 +48,7 @@ const ICONS = {
   earnings:  `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/><line x1="2" y1="20" x2="22" y2="20"/></svg>`,
   chevron:   `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>`,
   mindmap:   `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2a2.5 2.5 0 0 0-2.5 2.5v.5a2.5 2.5 0 0 0-2 2.45v.5a2.5 2.5 0 0 0 0 5v.5a2.5 2.5 0 0 0 2 2.45v.5A2.5 2.5 0 0 0 9.5 19"/><path d="M14.5 2a2.5 2.5 0 0 1 2.5 2.5v.5a2.5 2.5 0 0 1 2 2.45v.5a2.5 2.5 0 0 1 0 5v.5a2.5 2.5 0 0 1-2 2.45v.5a2.5 2.5 0 0 1-2.5 2.5"/><path d="M9.5 2h5M9.5 19h5"/><path d="M6 15a3 3 0 0 1 6 0M12 15a3 3 0 0 1 6 0"/></svg>`,
+  profile:   `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>`,
 };
 
 /** 顯示 Toast 提示 */
@@ -103,6 +104,7 @@ const shell = R.createEl('div', { cls: 'db-shell' });
   // 工具
   el(sb, 'div', { cls: 'db-nav-group-label', text: '工具' });
   const toolNav = [
+    ['檸子大腦側寫', '00 Dashboard/檸子大腦側寫', 'profile'],
     ['決策心智地圖', '00 Dashboard/我的決策心智地圖', 'mindmap'],
     ['靈感候選庫', '01 Brand/發文靈感池', 'capture'],
     ['股市新聞', '01 Brand/股市新聞', 'earnings'],
@@ -257,6 +259,13 @@ function makeCollapsible(parent, title, defaultOpen = false) {
     '慢慢來，比較快。',
   ];
   quote.textContent = quotes[now.getDate() % quotes.length];
+
+  // 檸子大腦側寫 teaser
+  const profileTeaser = el(left, 'div', {
+    attr: { style: 'margin-top:12px; font-size:12px; color:var(--db-text-muted); cursor:pointer; display:inline-flex; align-items:center; gap:5px;' },
+    text: '🧠 愛美 × AI創作者・主持/SG/COS/波段交易 — 看完整側寫 →',
+  });
+  profileTeaser.addEventListener('click', () => openPage('00 Dashboard/檸子大腦側寫'));
 
   // 右側：水獺插畫
   const otterWrap = row.createEl('div', { attr: { style: 'flex-shrink:0; width:100px; height:100px; opacity:.85;' } });
