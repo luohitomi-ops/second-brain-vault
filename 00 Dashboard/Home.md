@@ -49,6 +49,7 @@ const ICONS = {
   chevron:   `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>`,
   mindmap:   `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2a2.5 2.5 0 0 0-2.5 2.5v.5a2.5 2.5 0 0 0-2 2.45v.5a2.5 2.5 0 0 0 0 5v.5a2.5 2.5 0 0 0 2 2.45v.5A2.5 2.5 0 0 0 9.5 19"/><path d="M14.5 2a2.5 2.5 0 0 1 2.5 2.5v.5a2.5 2.5 0 0 1 2 2.45v.5a2.5 2.5 0 0 1 0 5v.5a2.5 2.5 0 0 1-2 2.45v.5a2.5 2.5 0 0 1-2.5 2.5"/><path d="M9.5 2h5M9.5 19h5"/><path d="M6 15a3 3 0 0 1 6 0M12 15a3 3 0 0 1 6 0"/></svg>`,
   profile:   `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>`,
+  manual:    `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>`,
 };
 
 /** 顯示 Toast 提示 */
@@ -106,6 +107,7 @@ const shell = R.createEl('div', { cls: 'db-shell' });
   const toolNav = [
     ['檸子大腦側寫', '00 Dashboard/檸子大腦側寫', 'profile'],
     ['決策心智地圖', '00 Dashboard/我的決策心智地圖', 'mindmap'],
+    ['使用手冊/維護頻率', '00 Dashboard/使用手冊', 'manual'],
     ['靈感候選庫', '01 Brand/發文靈感池', 'capture'],
     ['股市新聞', '01 Brand/股市新聞', 'earnings'],
     ['Skills 方法庫', '08 Skills 方法庫/README', 'task'],
