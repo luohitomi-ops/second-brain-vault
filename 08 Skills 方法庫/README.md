@@ -44,9 +44,9 @@ updated: 2026-07-08
 | `/更新中樞 [腦區]` | 討論完想固化結論 | 當前對話 | 無 | 對應「○○中樞.md」+ 該區 CLAUDE.md |
 | `/新工作流 [名稱]` | 有新專案要開始 | 使用者輸入 | 無 | `04 Projects/[名稱].md` + 連回對應中樞 |
 | `/部落格寫作` | 要寫部落格長文 | 部落格選題庫、formulas.md（長文版） | `social-post` skill（F公式長文版邏輯，跟社群短文分開）| 部落格草稿 |
-| `/生成Brief` | 手動想抓今日熱門話題 | WebSearch | 無（不經 skill，純 WebSearch）| `01 Brand/Brief YYYY-MM-DD.md` |
+| `/生成Brief` | 手動想立即重跑一次今日熱門話題 | `gemini-brief.mjs`（Gemini API） | 無（直接呼叫跟自動排程同一支腳本）| `01 Brand/Brief YYYY-MM-DD.md` |
 
-> ⚠️ **`/生成Brief` 待確認是否還需要**：discord-bot 已有 `gemini-brief.mjs` 每天 02:00 自動生成 Brief（用 Gemini API + Google 搜尋），輸出格式跟這個手動指令不一樣（自動版分 video_memes/stock_news/trending，這個手動版分「適合社群/適合部落格」）。兩套並存容易產生格式不一致的 Brief 檔，之後有空可以決定要不要棄用手動版或統一格式。
+> ✅ **2026-07-11 已統一**：`/生成Brief` 改成直接呼叫 discord-bot 每天 02:00 自動排程用的同一支 `gemini-brief.mjs`（0 Claude 額度），不再用 WebSearch 自己重寫一份格式不同的版本。單一邏輯，不會再有格式不一致的 Brief 檔。
 
 - [[分支用法速查]]（05 Reference）— 各分支節點怎麼用
 - [[協作分工與邊界]]（05 Reference）— 人 / Claude / DC bot 分工原則
