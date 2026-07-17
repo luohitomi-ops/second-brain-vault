@@ -20,7 +20,7 @@ updated: 2026-07-08
 | 指令 | 觸發時機 | 讀取 | 所需 skill / 顧問 | 產出位置 |
 |------|---------|------|------------------|---------|
 | `/每日校準` | 每天開始前，掃全局抓焦點 | 04 Projects status、三大中樞當前重點、CLAUDE.md、content_plan.md、history.md、自律計劃表.md、生活優先序、today-calendar.json | 無（純 vault 掃描，不召喚顧問人格）| 純報告，不寫檔 |
-| `/發文日常` | 要規劃/生成今日發文 | content_plan.md、history.md、每日碎片化靈感隨記.md、formulas.md、style_profile.md | `social-post` skill 核心邏輯（F1-F29 公式 + 語氣模仿）| 草稿（需另外「確認」才會實際發佈）|
+| `/發文日常` | 2026-07-16起不強制主題：給行事曆建議+靈感清單；她給主題+大綱才生成 | content_plan.md、每日碎片化靈感隨記.md、today-calendar.json、formulas.md、style_profile.md | `social-post` skill 核心邏輯（F1-F29 公式 + 語氣模仿，生成一定附拆解邏輯）| 草稿（需另外「確認」才會實際發佈）|
 | `/整理` `/整理Inbox` | 碎片靈感需要分類分流 | 每日碎片化靈感隨記.md | 無 | 各中樞對應分支（投資知識庫/愛美與醫美心得/想學習的技能清單等）|
 | `/週回填`（2026-07-16新增）| 每週跑一次，取代每天手動回填 | history.md 待回填清單、文案存檔.md（比對錨點）| `mcp__Claude_in_Chrome__*`（需電腦Chrome）+ `learn_style.md` 抓貼文技巧 | history.md（自動寫入讀到的數字）、content_plan.md（狀態同步）|
 
