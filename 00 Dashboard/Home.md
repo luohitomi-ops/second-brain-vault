@@ -107,6 +107,7 @@ const shell = R.createEl('div', { cls: 'db-shell' });
   const toolNav = [
     ['檸子大腦側寫', '00 Dashboard/檸子大腦側寫', 'profile'],
     ['決策心智地圖', '00 Dashboard/我的決策心智地圖', 'mindmap'],
+    ['主持稿與流程備忘', '01 Brand/主持資料庫/01_事前準備/README', 'review'],
     ['使用手冊/維護頻率', '00 Dashboard/使用手冊', 'manual'],
     ['靈感候選庫', '01 Brand/發文靈感池', 'capture'],
     ['股市新聞', '01 Brand/股市新聞', 'earnings'],
