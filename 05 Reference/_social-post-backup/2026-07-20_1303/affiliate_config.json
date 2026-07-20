@@ -1,0 +1,64 @@
+{
+  "_說明": "發文後自動留言的聯盟設定。skill 發完文後讀這個決定要不要帶留言、帶哪個搜尋詞走 API 拿連結。",
+
+  "coupang_api": {
+    "access_key": "0359c437-b00d-405b-ba3e-08ac0323fe79",
+    "secret_key": "e793155ff02e7ceb962a05753b7e6988e75ba0df",
+    "script": "C:\\tia\\coupang_search.ps1",
+    "_說明": "發文後用 script 帶 keyword 呼叫 API，自動拿最新聯盟連結"
+  },
+
+  "music_link": "https://distrokid.com/hyperfollow/tianing/-flow-state",
+  "music_comment": "🎵 不用斗內檸子也可以支持我(?) 點進去聽就是愛～",
+  "music_triggers": {
+    "formulas": ["F6"],
+    "intents": ["導流"],
+    "keywords": ["上架", "新歌", "串流", "Spotify", "Apple Music", "DistroKid", "聽歌", "歌單", "播放清單"]
+  },
+
+  "keyword_to_search": [
+    {
+      "id": "false_lashes",
+      "search_term": "假睫毛",
+      "keywords": ["假睫毛", "睫毛", "cos妝", "角色妝", "試妝", "cosplay"]
+    },
+    {
+      "id": "skincare",
+      "search_term": "保濕精華液",
+      "keywords": ["護膚", "保濕", "精華液", "面膜", "底妝", "妝前"]
+    },
+    {
+      "id": "makeup",
+      "search_term": "遮瑕膏",
+      "keywords": ["遮瑕", "粉底", "彩妝", "顯色", "持久", "定妝"]
+    },
+    {
+      "id": "milk_tea",
+      "search_term": "珍珠奶茶",
+      "keywords": ["奶茶", "珍珠奶茶", "手搖飲", "下午茶"]
+    },
+    {
+      "id": "snack",
+      "search_term": "豆干零食",
+      "keywords": ["豆干", "滷味", "零食", "下酒菜", "泡芙", "甜點"]
+    },
+    {
+      "id": "wig",
+      "search_term": "假髮",
+      "keywords": ["假髮", "cos假髮", "髮片", "髮套", "黃泉假髮", "COS髮型", "角色髮型"]
+    },
+    {
+      "id": "hair",
+      "search_term": "護髮髮圈",
+      "keywords": ["髮圈", "護髮", "髮飾", "不傷髮"]
+    }
+  ],
+
+  "coupang_comment": "不用斗內檸子也可以支持我(?) 每日酷澎好物推薦有需要再下標~\n{url}",
+
+  "no_comment_formulas": ["F3", "F4", "Mode A"],
+  "_no_comment說明": "純互動/情感貼文不帶任何連結，避免洗版感",
+
+  "no_affiliate_signals": ["RIP", "過世", "離世", "告別", "哀悼", "抗議", "嚴肅聲明", "地震", "災難"],
+  "_no_affiliate說明": "偵測到這些詞或使用者說「不帶分潤」時跳過留言"
+}
