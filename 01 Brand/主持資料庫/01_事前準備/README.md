@@ -37,7 +37,7 @@ if (upcoming.length === 0) {
 }
 
 if (expired.length > 0) {
-  dv.paragraph(`⚠️ **${expired.length} 篇已過期待歸檔**：` + expired.map(f => f.file.link).join('、') + `\n\n這幾篇活動應該已經結束，跟我說「幫我歸檔主持稿」，我會把裡面還有用的內容整理進 [[主持知識備忘]]，原稿確認後再刪。`);
+  dv.paragraph(`⚠️ **${expired.length} 篇已過期待歸檔**：` + expired.map(f => f.file.link).join('、') + `\n\n這幾篇活動應該已經結束，跟我說「幫我歸檔主持稿」。**長期合作客戶**（有列在 [[主持與直播執行庫]] 長期品牌日誌表的，如滿貫大亨/傑太ploom）的腳本是下次還會複用的操作範本，會移去 03_資料庫保存不刪；**單次活動**才會蒸餾進 [[主持知識備忘]] 後刪原稿。`);
 }
 ```
 
