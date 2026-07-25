@@ -605,6 +605,9 @@ try {
       const note = cols[6] || '';
       const d = new Date(date);
       if (isNaN(d.getTime()) || d > _48h || d < _14d) continue;
+      // 2026-07-25：撥撥獺獺已改隨性發、數據不追蹤（見 01 Brand/CLAUDE.md），不列入待補清單
+      // （note 判斷在 requirePublished=false 時完全不會跑，之前只改 history.md 備註文字沒用，要在這裡擋）
+      if (/撥撥|TikTok/.test(platform || '')) continue;
       const normPlat = (platform || '').split(/\s+@/)[0].trim();
       const key = `${date}|${normPlat}|${formula}`;
       // 不論有無數據，都標記為已見過（防止 content_plan 重複撈）
