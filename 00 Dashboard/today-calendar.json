@@ -1,23 +1,5 @@
 [
   {
-    "title": "830抽血",
-    "start": "2026-07-25 09:00",
-    "end": "2026-07-25 09:00",
-    "allDay": false,
-    "location": "",
-    "category": "未分類",
-    "description": ""
-  },
-  {
-    "title": "7/25 桃園大園定點禮生",
-    "start": "2026-07-25 09:00",
-    "end": "2026-07-25 09:00",
-    "allDay": false,
-    "location": "",
-    "category": "工作",
-    "description": "7/25 桃園大園定點禮生\n15:00-18:00 💰3000 超時800/H\n謝謝"
-  },
-  {
     "title": "銘倫14-17",
     "start": "2026-07-26 09:00",
     "end": "2026-07-26 09:00",
@@ -221,7 +203,7 @@
     "end": "2026-08-28 09:00",
     "allDay": false,
     "location": "",
-    "category": "未分類",
+    "category": "聚會",
     "description": ""
   },
   {
@@ -230,7 +212,16 @@
     "end": "2026-08-28 09:00",
     "allDay": false,
     "location": "",
-    "category": "未分類",
+    "category": "聚會",
+    "description": ""
+  },
+  {
+    "title": "1130 維利比",
+    "start": "2026-08-30 09:00",
+    "end": "2026-08-30 09:00",
+    "allDay": false,
+    "location": "",
+    "category": "聚會",
     "description": ""
   },
   {
@@ -239,7 +230,7 @@
     "end": "2026-08-31 09:00",
     "allDay": false,
     "location": "",
-    "category": "未分類",
+    "category": "聚會",
     "description": ""
   },
   {
