@@ -326,7 +326,7 @@ const _effectiveDate = (() => {
   return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
 })();
 const _dailyKey = `daily-tasks-${_effectiveDate}`;
-const _dailyDefs = ['檢視發文計畫', '排程發文', '每日數據回填', '幫貓刷牙'];
+const _dailyDefs = ['檢視發文計畫', '排程發文', '每日數據回填', '幫貓刷牙', '面部拉筋', '練背'];
 let _dailyState = {};
 try { _dailyState = JSON.parse(localStorage.getItem(_dailyKey) || '{}'); } catch(e) {}
 const dailyDone  = _dailyDefs.filter(t => _dailyState[t]).length;
