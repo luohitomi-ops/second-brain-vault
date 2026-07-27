@@ -164,6 +164,8 @@ const shell = R.createEl('div', { cls: 'db-shell' });
       ['投資', 'invest', [
         ['', [
           ['投資知識庫', '投資知識庫'],
+          ['股票資訊Inbox', '02 Invest-LT/股票資訊Inbox'],
+          ['投資決策日誌封存', '02 Invest-LT/投資決策日誌封存'],
         ]],
       ]],
       ['波段', 'swing', [
@@ -174,12 +176,21 @@ const shell = R.createEl('div', { cls: 'db-shell' });
           ['給獺金幣程式', '給獺金幣程式'],
         ]],
       ]],
+      ['專案', 'blueprint', [
+        ['', [
+          ['創作者工具箱', '04 Projects/創作者工具箱'],
+          ['音樂串流', '04 Projects/音樂串流'],
+          ['順勢交易機器人', '04 Projects/順勢交易機器人'],
+          ['部落格', '04 Projects/部落格'],
+        ]],
+      ]],
       ['生活', 'life', [
         ['', [
           ['愛美與醫美心得', '愛美與醫美心得'],
           ['想學習的技能清單', '想學習的技能清單'],
           ['課程筆記庫', '06 Lifestyle & Self-Growth/課程筆記庫/README'],
           ['自律計劃表', '自律計劃表'],
+          ['英文學習筆記', '06 Lifestyle & Self-Growth/英文學習筆記'],
         ]],
       ]],
       ['快速捕獲', 'capture', [
@@ -191,16 +202,30 @@ const shell = R.createEl('div', { cls: 'db-shell' });
     ];
 
     groups.forEach(([areaLabel, icon, subGroups]) => {
-      el(wrap, 'div', { attr: { style: 'font-size:10px;color:var(--db-text-muted);text-transform:uppercase;letter-spacing:.06em;padding:8px 12px 2px;' }, text: areaLabel });
+      // 大分類：自己也是可收合的（點開才看到小分類/項目），預設收合
+      const areaRow = wrap.createEl('div', {
+        attr: { style: 'cursor:pointer;user-select:none;display:flex;align-items:center;justify-content:space-between;padding:8px 12px 8px 24px;' },
+      });
+      areaRow.createEl('span', { attr: { style: 'font-size:10px;color:var(--db-text-muted);text-transform:uppercase;letter-spacing:.06em;' }, text: areaLabel });
+      const areaChev = areaRow.createEl('span', { attr: { style: 'font-size:9px;color:var(--db-text-muted);' }, text: '▸' });
+
+      const areaWrap = wrap.createEl('div', { attr: { style: 'display:none;' } });
+
       subGroups.forEach(([subLabel, items]) => {
         if (subLabel) {
-          el(wrap, 'div', { attr: { style: 'font-size:10px;color:var(--db-text-muted);opacity:.7;padding:4px 12px 2px 24px;' }, text: subLabel });
+          el(areaWrap, 'div', { attr: { style: 'font-size:10px;color:var(--db-text-muted);opacity:.7;padding:4px 12px 2px 32px;' }, text: subLabel });
         }
         items.forEach(([label, target]) => {
-          const a = wrap.createEl('div', { cls: 'db-nav-item', attr: { style: 'padding-left:32px;font-size:12px;' } });
+          const a = areaWrap.createEl('div', { cls: 'db-nav-item', attr: { style: 'padding-left:40px;font-size:12px;' } });
           a.innerHTML = `<span class="db-nav-icon">${ICONS[icon]}</span>${label}`;
           a.addEventListener('click', () => openPage(target));
         });
+      });
+
+      areaRow.addEventListener('click', () => {
+        const open = areaWrap.style.display !== 'none';
+        areaWrap.style.display = open ? 'none' : 'block';
+        areaChev.textContent = open ? '▸' : '▾';
       });
     });
 
