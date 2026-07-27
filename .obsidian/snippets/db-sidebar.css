@@ -60,6 +60,34 @@
   margin: 12px 0 4px 0;
 }
 
+/* --- 可收合分組標題（2026-07-27 新增：核心模組/工具/資料庫/資料庫內大分類統一用這套）--- */
+.db-nav-group-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  user-select: none;
+  padding: 8px 16px;
+  margin: 8px 8px 2px 8px;
+  border-radius: var(--db-radius-sm);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--db-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.db-nav-group-header:hover {
+  background: rgba(139, 123, 173, 0.1);
+  color: var(--db-text-primary);
+}
+.db-nav-group-chev {
+  font-size: 11px;
+  opacity: 0.6;
+}
+.db-nav-group-header:hover .db-nav-group-chev {
+  opacity: 1;
+}
+
 /* --- 導覽項目 --- */
 .db-nav-item {
   display: flex;

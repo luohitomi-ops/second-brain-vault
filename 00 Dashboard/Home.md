@@ -72,6 +72,21 @@ function openPage(name) {
   app.workspace.openLinkText(name, '', false);
 }
 
+/** 建立可收合分組標題（2026-07-27 統一：核心模組/工具/資料庫/資料庫內大分類共用同一套）
+ *  回傳 wrap 容器，呼叫端把項目塞進這個容器即可；可巢狀呼叫（wrap 當下一層的 parent）*/
+function buildNavGroup(parent, label, defaultOpen) {
+  const header = parent.createEl('div', { cls: 'db-nav-group-header' });
+  header.createEl('span', { text: label });
+  const chev = header.createEl('span', { cls: 'db-nav-group-chev', text: defaultOpen ? '▾' : '▸' });
+  const wrap = parent.createEl('div', { attr: { style: defaultOpen ? '' : 'display:none;' } });
+  header.addEventListener('click', () => {
+    const open = wrap.style.display !== 'none';
+    wrap.style.display = open ? 'none' : '';
+    chev.textContent = open ? '▸' : '▾';
+  });
+  return wrap;
+}
+
 // ── 2. App Shell ─────────────────────────────────────────────
 const shell = R.createEl('div', { cls: 'db-shell' });
 
@@ -86,8 +101,8 @@ const shell = R.createEl('div', { cls: 'db-shell' });
   lt.createEl('div', { cls: 'db-sidebar-logo-text', text: '檸子資料庫' });
   lt.createEl('div', { cls: 'db-sidebar-logo-sub', text: '整理生活・經營自我・創造價值' });
 
-  // 核心模組
-  el(sb, 'div', { cls: 'db-nav-group-label', text: '核心模組' });
+  // 核心模組（預設展開，最常用）
+  const coreWrap = buildNavGroup(sb, '核心模組', true);
   const coreNav = [
     ['今日主控', 'Home', 'home'],
     ['品牌中樞', '品牌中樞', 'brand'],
@@ -97,13 +112,13 @@ const shell = R.createEl('div', { cls: 'db-shell' });
     ['快速捕獲', '快速捕獲中樞', 'capture'],
   ];
   coreNav.forEach(([label, target, icon]) => {
-    const a = sb.createEl('div', { cls: 'db-nav-item' + (target === 'Home' ? ' active' : '') });
+    const a = coreWrap.createEl('div', { cls: 'db-nav-item' + (target === 'Home' ? ' active' : '') });
     a.innerHTML = `<span class="db-nav-icon">${ICONS[icon]}</span>${label}`;
     a.addEventListener('click', () => openPage(target));
   });
 
-  // 工具
-  el(sb, 'div', { cls: 'db-nav-group-label', text: '工具' });
+  // 工具（預設收合，項目較多較少用）
+  const toolWrap = buildNavGroup(sb, '工具', false);
   const toolNav = [
     ['檸子大腦側寫', '00 Dashboard/檸子大腦側寫', 'profile'],
     ['決策心智地圖', '00 Dashboard/我的決策心智地圖', 'mindmap'],
@@ -118,7 +133,7 @@ const shell = R.createEl('div', { cls: 'db-shell' });
     ['所有待辦', '', 'task'],
   ];
   toolNav.forEach(([label, target, icon]) => {
-    const a = sb.createEl('div', { cls: 'db-nav-item' });
+    const a = toolWrap.createEl('div', { cls: 'db-nav-item' });
     a.innerHTML = `<span class="db-nav-icon">${ICONS[icon]}</span>${label}`;
     if (target) a.addEventListener('click', () => openPage(target));
     else a.addEventListener('click', () => {
@@ -131,16 +146,9 @@ const shell = R.createEl('div', { cls: 'db-shell' });
     });
   });
 
-  // 資料庫（所有分支內容庫，按區域分組，預設收合避免側欄過長，2026-07-10 新增）
+  // 資料庫（所有分支內容庫，按區域分組，預設收合避免側欄過長，2026-07-10 新增；2026-07-27 大分類也各自可收合）
   (function buildDataLibrary() {
-    const labelRow = sb.createEl('div', {
-      cls: 'db-nav-group-label',
-      attr: { style: 'cursor:pointer;user-select:none;display:flex;align-items:center;justify-content:space-between;' },
-    });
-    labelRow.createEl('span', { text: '資料庫' });
-    const chev = labelRow.createEl('span', { attr: { style: 'font-size:10px;' }, text: '▸' });
-
-    const wrap = sb.createEl('div', { attr: { style: 'display:none;' } });
+    const wrap = buildNavGroup(sb, '資料庫', false);
 
     // 每個區域底下再分子分類（品牌項目多容易混雜，拆開後主持資料庫才好找；
     // 香氛工作室暫歸「其他事業」子分類，之後量變大可再獨立出去）
@@ -202,37 +210,19 @@ const shell = R.createEl('div', { cls: 'db-shell' });
     ];
 
     groups.forEach(([areaLabel, icon, subGroups]) => {
-      // 大分類：自己也是可收合的（點開才看到小分類/項目），預設收合
-      const areaRow = wrap.createEl('div', {
-        attr: { style: 'cursor:pointer;user-select:none;display:flex;align-items:center;justify-content:space-between;padding:8px 12px 8px 24px;' },
-      });
-      areaRow.createEl('span', { attr: { style: 'font-size:10px;color:var(--db-text-muted);text-transform:uppercase;letter-spacing:.06em;' }, text: areaLabel });
-      const areaChev = areaRow.createEl('span', { attr: { style: 'font-size:9px;color:var(--db-text-muted);' }, text: '▸' });
-
-      const areaWrap = wrap.createEl('div', { attr: { style: 'display:none;' } });
+      // 大分類：自己也是可收合的（點開才看到小分類/項目），預設收合，跟外層同一套樣式
+      const areaWrap = buildNavGroup(wrap, areaLabel, false);
 
       subGroups.forEach(([subLabel, items]) => {
         if (subLabel) {
-          el(areaWrap, 'div', { attr: { style: 'font-size:10px;color:var(--db-text-muted);opacity:.7;padding:4px 12px 2px 32px;' }, text: subLabel });
+          el(areaWrap, 'div', { attr: { style: 'font-size:10px;color:var(--db-text-muted);opacity:.7;padding:4px 12px 2px 16px;' }, text: subLabel });
         }
         items.forEach(([label, target]) => {
-          const a = areaWrap.createEl('div', { cls: 'db-nav-item', attr: { style: 'padding-left:40px;font-size:12px;' } });
+          const a = areaWrap.createEl('div', { cls: 'db-nav-item', attr: { style: 'padding-left:24px;font-size:12px;' } });
           a.innerHTML = `<span class="db-nav-icon">${ICONS[icon]}</span>${label}`;
           a.addEventListener('click', () => openPage(target));
         });
       });
-
-      areaRow.addEventListener('click', () => {
-        const open = areaWrap.style.display !== 'none';
-        areaWrap.style.display = open ? 'none' : 'block';
-        areaChev.textContent = open ? '▸' : '▾';
-      });
-    });
-
-    labelRow.addEventListener('click', () => {
-      const open = wrap.style.display !== 'none';
-      wrap.style.display = open ? 'none' : 'block';
-      chev.textContent = open ? '▸' : '▾';
     });
   })();
 
