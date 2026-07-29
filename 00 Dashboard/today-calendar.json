@@ -1,14 +1,5 @@
 [
   {
-    "title": "大老爺4-6",
-    "start": "2026-07-28 09:00",
-    "end": "2026-07-28 09:00",
-    "allDay": false,
-    "location": "",
-    "category": "旅遊",
-    "description": ""
-  },
-  {
     "title": "大老爺6-8",
     "start": "2026-07-29 09:00",
     "end": "2026-07-29 09:00",
@@ -52,6 +43,15 @@
     "location": "",
     "category": "工作",
     "description": "徵花蓮飲料活動PG\n（廠商可以從台北載）\n\n時間待定）\n地點：花蓮市中山路259號\n\n知名飲料快閃遊行活動\n一天兩場\n（一場大概15-30分，預計下午&傍晚）\n其他時間休息！！\n男女都要～需要6-8位\n\n廠商提供科技感服裝！\n\n費用：4000\n（沒有另外補車資 廠商可以載來回或是花蓮當地人）\n\n希望可以找到認真活潑的男孩女孩！！🙌🏻🙌🏻\n報名請給我組圖！也歡迎推薦！！\n\n謝謝～"
+  },
+  {
+    "title": "鼠看醫生 早上",
+    "start": "2026-08-04 09:00",
+    "end": "2026-08-04 09:00",
+    "allDay": false,
+    "location": "",
+    "category": "未分類",
+    "description": ""
   },
   {
     "title": "大老爺6-8",
@@ -225,12 +225,30 @@
     "description": ""
   },
   {
+    "title": "蝦皮",
+    "start": "2026-09-09 09:00",
+    "end": "2026-09-09 09:00",
+    "allDay": false,
+    "location": "",
+    "category": "工作",
+    "description": ""
+  },
+  {
     "title": "蕾米埃爾 伸維哥",
     "start": "2026-09-12 09:00",
     "end": "2026-09-12 09:00",
     "allDay": false,
     "location": "",
     "category": "未分類",
+    "description": ""
+  },
+  {
+    "title": "蝦皮",
+    "start": "2026-09-25 09:00",
+    "end": "2026-09-25 09:00",
+    "allDay": false,
+    "location": "",
+    "category": "工作",
     "description": ""
   }
 ]
