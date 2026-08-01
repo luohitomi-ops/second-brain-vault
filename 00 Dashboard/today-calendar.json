@@ -1,14 +1,5 @@
 [
   {
-    "title": "大老爺6-8",
-    "start": "2026-07-31 09:00",
-    "end": "2026-07-31 09:00",
-    "allDay": false,
-    "location": "",
-    "category": "旅遊",
-    "description": ""
-  },
-  {
     "title": "花蓮飲料快閃遊行活動",
     "start": "2026-08-01 09:00",
     "end": "2026-08-01 09:00",
@@ -135,6 +126,15 @@
     "description": ""
   },
   {
+    "title": "半夜1:25飛機",
+    "start": "2026-08-27 09:00",
+    "end": "2026-08-27 09:00",
+    "allDay": false,
+    "location": "",
+    "category": "旅遊",
+    "description": ""
+  },
+  {
     "title": "大老爺6-8",
     "start": "2026-08-27 09:00",
     "end": "2026-08-27 09:00",
@@ -198,7 +198,25 @@
     "description": ""
   },
   {
-    "title": "蝦皮",
+    "title": "西真回診",
+    "start": "2026-09-01 09:00",
+    "end": "2026-09-01 09:00",
+    "allDay": false,
+    "location": "",
+    "category": "聚會",
+    "description": ""
+  },
+  {
+    "title": "蝦皮早上12-13",
+    "start": "2026-09-09 09:00",
+    "end": "2026-09-09 09:00",
+    "allDay": false,
+    "location": "",
+    "category": "工作",
+    "description": ""
+  },
+  {
+    "title": "蝦皮20點-21點",
     "start": "2026-09-09 09:00",
     "end": "2026-09-09 09:00",
     "allDay": false,
@@ -216,7 +234,7 @@
     "description": ""
   },
   {
-    "title": "蝦皮",
+    "title": "蝦皮20點-21點",
     "start": "2026-09-25 09:00",
     "end": "2026-09-25 09:00",
     "allDay": false,
