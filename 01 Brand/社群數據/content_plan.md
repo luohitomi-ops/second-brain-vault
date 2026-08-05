@@ -216,7 +216,7 @@ _平台：撥撥TikTok（@bobotataandcat，14天必排主渠道）、撥撥IG（
 | 8/5 | 撥撥TikTok | F18 | 20:00 | 🆕 獺獺撥撥工廠打工問薪水梗 | ⬜ 待生成影片 |
 | 8/5 | FB個人 | F2 | — | 🆕 黃泉COS（崩壞：星穹鐵道，台詞開場版，感謝MOK+小幫手+攝影棚）；使用者自己發佈，未經Claude執行；草稿見下方「8/5-8/6黃泉COS」區塊 | ✅ 已發（使用者自行標記人+發布）|
 | 8/6 | Gracie粉專 | F2 | 20:00 | 🆕 黃泉COS（同上，FB個人共用同版文字+加hashtag）；草稿見下方「8/5-8/6黃泉COS」區塊 | ✅ 已排程（透過Meta Business Suite，20:00自動發布，48h後8/8 20:00可回填）|
-| 8/6 | COS IG (ningzcosplay) | F2 | — | 🆕 黃泉COS（同上）；**ningzcosplay未連結Business Suite，需使用者自行手動發布**，草稿見下方「8/5-8/6黃泉COS」區塊 | ⬜ 待使用者手動發布 |
+| 8/6 | COS IG (ningzcosplay) | F2 | — | 🆕 黃泉COS（同上）；使用者自己切換到「檸子NingZ cosplay」商家資產組合，透過Business Suite自行排程，草稿見下方「8/5-8/6黃泉COS」區塊 | ✅ 已排程（使用者自己設定，時間未知）|
 | 8/8 | 撥撥TikTok | F18 | 20:00 | 🆕 百獸戰隊撥撥戴上專屬頭盔（登場篇）| ⬜ 待生成影片 |
 | 8/11 | 撥撥TikTok | F18 | 20:00 | 🆕 土撥鼠的一天（起床刷牙吃早餐上班回家，重排非線性開場）| ⬜ 待生成影片 |
 | 8/14 | 撥撥TikTok | F18 | 20:00 | 🆕 土撥鼠點火柴玳瑁貓鬍子烤焦（插畫版）| ⬜ 待生成影片 |
@@ -590,7 +590,7 @@ COS粉專被停權了，理由欄位寫「假冒其他人」？？？
 
 ### 8/5-8/6黃泉COS（FB個人／Gracie粉專／COS IG，2026-08-05排定）
 
-> **帳號釐清（2026-08-05）**：使用者COS的IG帳號是**ningzcosplay**，不是yuzukiluo（yuzukiluo是個人IG，之前8/3記錯，已在CLAUDE.md更正）。ningzcosplay未連結Meta Business Suite，這篇的Gracie粉專版由Claude透過Business Suite排程成功，FB個人版由使用者自己發布（含手動標記人），COS IG版需使用者自行到ningzcosplay手動發布。
+> **帳號釐清（2026-08-05）**：使用者COS的IG帳號是**ningzcosplay**，不是yuzukiluo（yuzukiluo是個人IG，之前8/3記錯，已在CLAUDE.md更正）。ningzcosplay連結在Business Suite的另一個商家資產組合「檸子NingZ cosplay」底下（不是Claude預設停留的「Gracie.W 魏檸」組合），需要先切換組合才看得到。這篇：Gracie粉專版由Claude透過Business Suite排程成功；FB個人版由使用者自己發布（含手動標記人）；COS IG版使用者自己切換到對的資產組合後自行排程完成。
 
 **FB個人／Gracie粉專／COS IG 共用同版文字｜F2（COS台詞開場版）：**
 ```
