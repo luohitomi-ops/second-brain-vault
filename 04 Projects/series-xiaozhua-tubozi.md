@@ -74,13 +74,28 @@ ending_contract: 女主與雙靈獸的羈絆需有明確交代；土撥鼠尋主
 
 | 類型 | ID | 說明 | 視覺錨 |
 |---|---|---|---|
-| 角色 | CHAR_LEAD | 女主／陸知（暫名），現代裝束→逐漸融入仙俠世界服裝 | TBD，待定妝鎖定 |
-| 角色 | CHAR_OTTER | 小爪水獺／團子（暫名），靈獸形態 | TBD，待定妝鎖定 |
-| 角色 | CHAR_MARMOT | 土撥鼠／阿撥（暫名），靈獸形態 | TBD，待定妝鎖定 |
+| 角色 | CHAR_LEAD | 女主／陸知（暫名），現代裝束→逐漸融入仙俠世界服裝 | ✅鎖定（Stage 0初始版）`C:\Users\USER\Desktop\AI作品與素材庫\AI短劇實驗\設定圖\陸之初始.png` |
+| 角色 | CHAR_OTTER | 小爪水獺／團子（暫名），靈獸形態，改編自「撥撥獺獺」既有獺獺設計 | ✅鎖定 `C:\Users\USER\Desktop\AI作品與素材庫\AI短劇實驗\設定圖\團子.png` |
+| 角色 | CHAR_MARMOT | 土撥鼠／阿撥（暫名），靈獸形態，改編自「撥撥獺獺」既有撥撥設計 | ✅鎖定 `C:\Users\USER\Desktop\AI作品與素材庫\AI短劇實驗\設定圖\阿撥.png` |
 | 角色 | CHAR_ELDER_GATE | 行會長老，Ep2登場 | TBD |
-| 場景 | LOC_MOUNTAIN_PASS | 現實山道，Ep1開場僅用一次 | TBD |
-| 場景 | LOC_VILLAGE | 竹溪村口，主場景，需可重複使用 | TBD |
-| 道具 | PROP_CONTRACT_MARK | 契約印記，發光特效需固定視覺語言 | TBD |
+| 場景 | LOC_MOUNTAIN_PASS | 現實山道，Ep1開場僅用一次 | ✅鎖定 `C:\Users\USER\Desktop\AI作品與素材庫\AI短劇實驗\場景圖\山道.png` |
+| 場景 | LOC_VILLAGE | 竹溪村口，主場景，需可重複使用 | ✅鎖定 `C:\Users\USER\Desktop\AI作品與素材庫\AI短劇實驗\場景圖\竹溪村.png` |
+| 道具 | PROP_CONTRACT_MARK | 契約印記，發光特效需固定視覺語言 | ✅鎖定 `C:\Users\USER\Desktop\AI作品與素材庫\AI短劇實驗\場景圖\契約印記.png` |
+
+生成來源：Gemini 對話 https://gemini.google.com/app/33c7143f9c71f897（見 `ai-media-generator` skill 的 [gemini.md](file:///C:/Users/USER/.claude/skills/ai-media-generator/automation/site-profiles/gemini.md) site profile）。續生成同一批角色／場景一律沿用此對話，不開新對話。
+
+### CHAR_LEAD 造型升級軌跡（與 Reveal Ladder 綁定）
+
+陸之初始版只是 Stage 0，之後隨故事推進「變強變美」，每次造型升級都要有對應的劇情觸發事件，不能無故變美：
+
+| 階段 | 觸發事件（對應 Reveal Ladder 層級） | 服裝／氣質變化 | 狀態 |
+|---|---|---|---|
+| Stage 0 | Ep1 初始，剛跌入異世界 | 破損現代便服＋粗麻布腰帶，狼狽帶警惕感，契約印記微光 | ✅已鎖定（陸之初始.png） |
+| Stage 1 | Reveal層級1-2完成（契約異能初步展現＋阿撥尋主線開啟，約Ep3-5） | 融入村莊生活，破損便服修補／替換成簡易仙俠布衣，眼神從警惕轉為堅定，契約印記發光更穩定 | 待生成 |
+| Stage 2 | Antagonist層級3收束（被迫離村流亡／稽查司盯上，中季） | 正式的契約者／修士裝束，開始有能力自保，氣場提升，可能出現象徵性配飾（如靈獸給的信物） | 待生成 |
+| Stage 3 | 季末大揭露（前世身份與召喚真相揭曉） | 融合前世身份線索的完整仙俠造型，「變強變美」完全體，作為全季視覺高潮 | 待生成 |
+
+每個階段生成時都要先讀這張表，確認「為什麼變」再動「怎麼變」，並沿用同一個 Gemini 對話＋陸之初始的臉部特徵做編輯延伸，不要重新生成一張不相關的臉。
 
 ## 結局護欄
 
