@@ -1,20 +1,20 @@
 [
   {
-    "title": "百家發牌",
-    "start": "2026-08-10 09:00",
-    "end": "2026-08-10 09:00",
-    "allDay": false,
-    "location": "",
-    "category": "工作",
-    "description": ""
-  },
-  {
     "title": "手術",
     "start": "2026-08-11 00:00",
     "end": "2026-08-12 00:00",
     "allDay": true,
     "location": "",
     "category": "購物",
+    "description": ""
+  },
+  {
+    "title": "記得訂攝影棚",
+    "start": "2026-08-11 09:00",
+    "end": "2026-08-11 09:00",
+    "allDay": false,
+    "location": "",
+    "category": "未分類",
     "description": ""
   },
   {
@@ -207,6 +207,15 @@
     "description": ""
   },
   {
+    "title": "Celia (飛利浦）",
+    "start": "2026-09-13 09:00",
+    "end": "2026-09-13 09:00",
+    "allDay": false,
+    "location": "",
+    "category": "未分類",
+    "description": ""
+  },
+  {
     "title": "wirforce",
     "start": "2026-09-24 09:00",
     "end": "2026-09-27 09:00",
@@ -219,6 +228,15 @@
     "title": "蝦皮20點-21點",
     "start": "2026-09-25 09:00",
     "end": "2026-09-25 09:00",
+    "allDay": false,
+    "location": "",
+    "category": "工作",
+    "description": ""
+  },
+  {
+    "title": "SGT7",
+    "start": "2026-10-10 09:00",
+    "end": "2026-10-11 09:00",
     "allDay": false,
     "location": "",
     "category": "工作",
