@@ -1,32 +1,5 @@
 [
   {
-    "title": "大老爺4-6",
-    "start": "2026-08-19 09:00",
-    "end": "2026-08-19 09:00",
-    "allDay": false,
-    "location": "",
-    "category": "未分類",
-    "description": ""
-  },
-  {
-    "title": "中午12鼻雷射",
-    "start": "2026-08-19 09:00",
-    "end": "2026-08-19 09:00",
-    "allDay": false,
-    "location": "",
-    "category": "未分類",
-    "description": ""
-  },
-  {
-    "title": "霸王8-10",
-    "start": "2026-08-19 09:00",
-    "end": "2026-08-19 09:00",
-    "allDay": false,
-    "location": "",
-    "category": "工作",
-    "description": ""
-  },
-  {
     "title": "遠傳鶯歌",
     "start": "2026-08-20 09:00",
     "end": "2026-08-20 09:00",
@@ -234,6 +207,15 @@
     "description": ""
   },
   {
+    "title": "大老爺4-6",
+    "start": "2026-09-10 09:00",
+    "end": "2026-09-10 09:00",
+    "allDay": false,
+    "location": "",
+    "category": "工作",
+    "description": ""
+  },
+  {
     "title": "Celia (飛利浦）",
     "start": "2026-09-13 09:00",
     "end": "2026-09-13 09:00",
@@ -243,12 +225,39 @@
     "description": ""
   },
   {
+    "title": "大老爺6-8",
+    "start": "2026-09-14 09:00",
+    "end": "2026-09-14 09:00",
+    "allDay": false,
+    "location": "",
+    "category": "工作",
+    "description": ""
+  },
+  {
+    "title": "大老爺4-6",
+    "start": "2026-09-18 09:00",
+    "end": "2026-09-18 09:00",
+    "allDay": false,
+    "location": "",
+    "category": "工作",
+    "description": ""
+  },
+  {
     "title": "蕾米埃爾",
     "start": "2026-09-20 09:00",
     "end": "2026-09-20 09:00",
     "allDay": false,
     "location": "",
     "category": "未分類",
+    "description": ""
+  },
+  {
+    "title": "大老爺8-10",
+    "start": "2026-09-22 09:00",
+    "end": "2026-09-22 09:00",
+    "allDay": false,
+    "location": "",
+    "category": "工作",
     "description": ""
   },
   {
@@ -264,6 +273,15 @@
     "title": "蝦皮20點-21點",
     "start": "2026-09-25 09:00",
     "end": "2026-09-25 09:00",
+    "allDay": false,
+    "location": "",
+    "category": "工作",
+    "description": ""
+  },
+  {
+    "title": "大老爺6-8",
+    "start": "2026-09-30 09:00",
+    "end": "2026-09-30 09:00",
     "allDay": false,
     "location": "",
     "category": "工作",
