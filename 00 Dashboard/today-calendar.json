@@ -36,15 +36,6 @@
     "description": "INNISFREE 官方旗艦店"
   },
   {
-    "title": "蝦皮晚上10-12",
-    "start": "2026-09-09 09:00",
-    "end": "2026-09-09 09:00",
-    "allDay": false,
-    "location": "",
-    "category": "工作",
-    "description": ""
-  },
-  {
     "title": "蝦皮20點-21點",
     "start": "2026-09-09 09:00",
     "end": "2026-09-09 09:00",
@@ -114,6 +105,15 @@
     "allDay": false,
     "location": "",
     "category": "繳費",
+    "description": ""
+  },
+  {
+    "title": "8點開會",
+    "start": "2026-09-14 09:00",
+    "end": "2026-09-14 09:00",
+    "allDay": false,
+    "location": "",
+    "category": "未分類",
     "description": ""
   },
   {
