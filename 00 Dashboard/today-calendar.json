@@ -1,32 +1,5 @@
 [
   {
-    "title": "叩舍開會",
-    "start": "2026-09-09 09:00",
-    "end": "2026-09-09 09:00",
-    "allDay": false,
-    "location": "",
-    "category": "未分類",
-    "description": ""
-  },
-  {
-    "title": "蝦皮早上12-13",
-    "start": "2026-09-09 09:00",
-    "end": "2026-09-09 09:00",
-    "allDay": false,
-    "location": "",
-    "category": "工作",
-    "description": "INNISFREE 官方旗艦店"
-  },
-  {
-    "title": "蝦皮20點-21點",
-    "start": "2026-09-09 09:00",
-    "end": "2026-09-09 09:00",
-    "allDay": false,
-    "location": "",
-    "category": "工作",
-    "description": ""
-  },
-  {
     "title": "圖奇8-10",
     "start": "2026-09-10 09:00",
     "end": "2026-09-10 09:00",
@@ -117,6 +90,15 @@
     "description": ""
   },
   {
+    "title": "房租簽約",
+    "start": "2026-09-15 09:00",
+    "end": "2026-09-15 09:00",
+    "allDay": false,
+    "location": "",
+    "category": "未分類",
+    "description": ""
+  },
+  {
     "title": "雅丰5.",
     "start": "2026-09-15 09:00",
     "end": "2026-09-15 09:00",
@@ -135,6 +117,15 @@
     "description": ""
   },
   {
+    "title": "1.賀禮翁開會",
+    "start": "2026-09-16 09:00",
+    "end": "2026-09-16 09:00",
+    "allDay": false,
+    "location": "",
+    "category": "未分類",
+    "description": ""
+  },
+  {
     "title": "帶位大使6-8",
     "start": "2026-09-16 09:00",
     "end": "2026-09-16 09:00",
@@ -150,6 +141,15 @@
     "allDay": false,
     "location": "",
     "category": "繳費",
+    "description": ""
+  },
+  {
+    "title": "臉書直播 7-8",
+    "start": "2026-09-17 09:00",
+    "end": "2026-09-17 09:00",
+    "allDay": false,
+    "location": "",
+    "category": "工作",
     "description": ""
   },
   {
@@ -231,6 +231,15 @@
     "allDay": false,
     "location": "",
     "category": "工作",
+    "description": ""
+  },
+  {
+    "title": "彩排",
+    "start": "2026-09-23 09:00",
+    "end": "2026-09-23 09:00",
+    "allDay": false,
+    "location": "",
+    "category": "未分類",
     "description": ""
   },
   {
